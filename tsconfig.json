@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es2015",
+      "moduleResolution": "node",
+      "strict": false,
+      "declaration": true,
+      "noUnusedLocals": true,
+      "resolveJsonModule": true,
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "outDir": "dist",
+      "module": "CommonJS",
+      "lib": ["ESNext","DOM"],
+      "sourceMap": true,
+    },
+    "include": ["./src"]
+  }
