@@ -1,8 +1,8 @@
 import type { Plugin, HtmlTagDescriptor } from 'vite';
 import dayjs from 'dayjs';
+import * as packageInfo  from '../package.json';
 import path from 'path';
 import fs from 'fs';
-
 interface GitLabFlowOptions {
     projectName?: string
 }
@@ -24,6 +24,7 @@ export default function gitLabFlow(options: GitLabFlowOptions): Plugin {
 
     const HtmlStr: string = `const __GLOBAL_ENV_ = ${JSON.stringify(env)};
     const __APP_INFO__ = ${JSON.stringify(__APP_INFO__)};
+    const __PACKAGE_INFO__ = ${JSON.stringify(packageInfo)};
     \n ${extStr}`
 
     return {
