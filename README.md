@@ -15,7 +15,7 @@ GitLab pipelined print build information plug-ins
 # Preview
 You can view the deployment information for the code in the console
 
-![image.png](https://static-1253419794.file.myqcloud.com/img/cPj9Vz.png)
+![image.png](https://static-1253419794.file.myqcloud.com/img/MgWpbn.png)
 
 
 # Installation
@@ -42,16 +42,30 @@ vite.config.js/ts
 import vitePluginGitLabFlow from "vite-plugin-gitlab-flow";
 
 plugins: [
-    vitePluginGitLabFlow({ projectName: 'rs'}),
+    vitePluginGitLabFlow({
+        projectName: '榕树工具',
+        debug: true,
+        extra: [
+            {
+                keys: 'VITE_APP_TITLE',
+                label: '项目title'
+            }
+        ],
+        styles:['background: red']
+    }),
 ]
+
 ```
 
 # Options
 
 
-| options      | description  | type    | default      |
-|--------------|--------------|---------|--------------|
-| projectName? | project name | string  | package.name |
+| options      | description         | type    | default      |
+|--------------|---------------------|---------|--------------|
+| projectName? | project name        | string  | package.name |
+| debug?       | debug               | boolean  | false        |
+| extra?       | Extra display field | string  | []           |
+| styles?      | Custom style        | string[] | []           | 
 
 # 鸣谢
 Thanks [vite-plugin-aliyun-flow](https://www.npmjs.com/package/vite-plugin-aliyun-flow) the ideas and code. 

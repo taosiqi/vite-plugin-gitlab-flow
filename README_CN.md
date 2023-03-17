@@ -12,7 +12,7 @@ GitLab流水线打印构建信息插件
 # 效果预览
 可以在控制台查看代码的部署信息
 
-![image.png](https://static-1253419794.file.myqcloud.com/img/cPj9Vz.png)
+![image.png](https://static-1253419794.file.myqcloud.com/img/MgWpbn.png)
 
 
 # 安装
@@ -39,16 +39,29 @@ npm i -D vite-plugin-gitlab-flow
 import vitePluginGitLabFlow from "vite-plugin-gitlab-flow";
 
 plugins: [
-    vitePluginGitLabFlow({ projectName: 'rs'}),
+    vitePluginGitLabFlow({
+        projectName: '榕树工具',
+        debug: true,
+        extra: [
+            {
+                keys: 'VITE_APP_TITLE',
+                label: '项目title'
+            }
+        ],
+        styles:['background: red']
+    }),
 ]
 ```
 
 # 配置项
 
 
-| options      | description                   | type    | default      |
-|--------------|-------------------------------|---------|--------------|
-| projectName? | 项目名称，默认取package.json里的name字段。 | string  | package.name |
+| options      | description                         | type    | default      |
+|--------------|-------------------------------------|---------|--------------|
+| projectName? | 项目名称，默认取package.json里的name字段。       | string  | package.name |
+| debug?       | debug模式                             | boolean  | false        |
+| extra?       | 额外需要显示的字段，需要是env里面有的字段，可开启debug模式查看 | string  | []           |
+| styles?      | 自定义样式                               | string[] | []           | 
 
 # 鸣谢
 感谢提供的思路和代码，https://www.npmjs.com/package/vite-plugin-aliyun-flow
