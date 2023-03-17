@@ -7,15 +7,15 @@ const styles = [
     'text-shadow: 2px 2px black',
     'padding: 5px',
 ].join(';');
-console.log(`%c插件名称: ${__PACKAGE_INFO__.name}, 当前版本: V${__PACKAGE_INFO__.version} `, styles);
+console.log(`插件名称: ${__PACKAGE_INFO__.name}, 当前版本: V${__PACKAGE_INFO__.version} `);
 
-console.log(`%c插件作者: V${__PACKAGE_INFO__.author}, 仓库地址: V${__PACKAGE_INFO__.homepage}`, styles);
+console.log(`插件作者: ${__PACKAGE_INFO__.author}, 仓库地址: ${__PACKAGE_INFO__.homepage}`);
 
 console.log(`%c${__APP_INFO__.projectName}, 当前版本: V${__APP_INFO__.pkg.version}`, styles);
 
 console.log(`%c打包时间: ${__APP_INFO__.lastBuildTime}`,styles);
 
-console.log('__GLOBAL_ENV_', __GLOBAL_ENV_);
+// console.log('__GLOBAL_ENV_', __GLOBAL_ENV_);
 
 console.log(`%c流水线执行人: ${__GLOBAL_ENV_.GITLAB_USER_NAME || '-'}`, styles);
 

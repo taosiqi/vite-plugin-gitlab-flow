@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-gitlab-flow",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "控制台打印构gitlab效流水线建信息插件",
   "main": "dist/index.js",
   "scripts": {

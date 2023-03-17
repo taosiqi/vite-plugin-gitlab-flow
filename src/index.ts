@@ -1,20 +1,23 @@
 import type { Plugin, HtmlTagDescriptor } from 'vite';
 import dayjs from 'dayjs';
-import * as packageInfo  from '../package.json';
 import path from 'path';
 import fs from 'fs';
+
 interface GitLabFlowOptions {
     projectName?: string
 }
-
 export default function gitLabFlow(options: GitLabFlowOptions): Plugin {
     const env = process.env
 
     const pkg: any = fs.readFileSync(process.cwd() + '/package.json', 'utf-8')
 
+    let packageInfo: any = fs.readFileSync(process.cwd() + '/node_modules/vite-plugin-gitlab-flow/package.json', 'utf-8')
+
     const extStr: string = fs.readFileSync(path.join(__dirname, '../src/external.js'), 'utf-8')
 
     const { name, version } = JSON.parse(pkg);
+
+    packageInfo=JSON.parse(packageInfo);
 
     const __APP_INFO__ = {
         projectName: options.projectName || name,
@@ -34,6 +37,7 @@ export default function gitLabFlow(options: GitLabFlowOptions): Plugin {
             define: {
                 __APP_INFO__: JSON.stringify(__APP_INFO__),
                 __GLOBAL_ENV_: env,
+                __PACKAGE_INFO__:JSON.stringify(packageInfo)
             },
         }),
         transformIndexHtml(html): HtmlTagDescriptor[] {
