@@ -21,7 +21,7 @@ interface GitLabFlowOptions {
     }[],
     styles?:string[] | string
 }
-export default function gitLabFlow(options: GitLabFlowOptions): Plugin {
+export default function gitLabFlow(options: GitLabFlowOptions={}): Plugin {
     let {debug=false,extra=[],styles=defaultStyle}=options
     if (Array.isArray(styles)){
         styles=styles.join(';')
