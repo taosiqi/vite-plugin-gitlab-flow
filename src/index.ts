@@ -3,11 +3,11 @@ import dayjs from 'dayjs';
 import path from 'path';
 import fs from 'fs';
 
-interface AliflowOptions {
+interface GitLabFlowOptions {
     projectName?: string
 }
 
-export default function Aliflow(options: AliflowOptions): Plugin {
+export default function gitLabFlow(options: GitLabFlowOptions): Plugin {
     const env = process.env
 
     const pkg: any = fs.readFileSync(process.cwd() + '/package.json', 'utf-8')
@@ -27,7 +27,7 @@ export default function Aliflow(options: AliflowOptions): Plugin {
     \n ${extStr}`
 
     return {
-        name: 'vite-plugin-aliuyun-flow',
+        name: 'vite-plugin-gitlab-flow',
         apply: 'build',
         config: () => ({
             define: {
