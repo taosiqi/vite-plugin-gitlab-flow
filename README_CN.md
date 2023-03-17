@@ -12,7 +12,7 @@ GitLab流水线打印构建信息插件
 # 效果预览
 可以在控制台查看代码的部署信息
 
-![image.png](https://static-1253419794.file.myqcloud.com/img/8a4Enk.png)
+![image.png](https://static-1253419794.file.myqcloud.com/img/cPj9Vz.png)
 
 
 # 安装

@@ -15,7 +15,7 @@ GitLab pipelined print build information plug-ins
 # Preview
 You can view the deployment information for the code in the console
 
-![image.png](https://static-1253419794.file.myqcloud.com/img/8a4Enk.png)
+![image.png](https://static-1253419794.file.myqcloud.com/img/cPj9Vz.png)
 
 
 # Installation
