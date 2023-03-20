@@ -48,7 +48,9 @@ plugins: [
                 label: '项目title'
             }
         ],
-        styles:['background: red']
+        styles:{
+            color: 'red',
+        }
     }),
 ]
 ```
@@ -56,12 +58,12 @@ plugins: [
 # 配置项
 
 
-| options      | description                         | type    | default      |
-|--------------|-------------------------------------|---------|--------------|
-| projectName? | 项目名称，默认取package.json里的name字段。       | string  | package.name |
-| debug?       | debug模式                             | boolean  | false        |
-| extra?       | 额外需要显示的字段，需要是env里面有的字段，可开启debug模式查看 | string  | []           |
-| styles?      | 自定义样式                               | string[] | []           | 
+| options      | description                         | type  | default    |
+|--------------|-------------------------------------|-------|------------|
+| projectName? | 项目名称，默认取package.json里的name字段。       | string | package.name |
+| debug?       | debug模式                             | boolean | false      |
+| extra?       | 额外需要显示的字段，需要是env里面有的字段，可开启debug模式查看 | string | []         |
+| styles?      | 自定义样式                               | Style | Style           | 
 
 # 鸣谢
 感谢提供的思路和代码，https://www.npmjs.com/package/vite-plugin-aliyun-flow

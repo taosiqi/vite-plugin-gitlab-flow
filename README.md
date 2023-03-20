@@ -51,7 +51,9 @@ plugins: [
                 label: '项目title'
             }
         ],
-        styles:['background: red']
+        styles:{
+            color: 'red',
+        }
     }),
 ]
 
@@ -60,12 +62,12 @@ plugins: [
 # Options
 
 
-| options      | description         | type    | default      |
-|--------------|---------------------|---------|--------------|
-| projectName? | project name        | string  | package.name |
-| debug?       | debug               | boolean  | false        |
-| extra?       | Extra display field | string  | []           |
-| styles?      | Custom style        | string[] | []           | 
+| options      | description         | type  | default    |
+|--------------|---------------------|-------|------------|
+| projectName? | project name        | string | package.name |
+| debug?       | debug               | boolean | false      |
+| extra?       | Extra display field | string | []         |
+| styles?      | Custom style        | Style | Style           | 
 
 # 鸣谢
 Thanks [vite-plugin-aliyun-flow](https://www.npmjs.com/package/vite-plugin-aliyun-flow) the ideas and code. 
