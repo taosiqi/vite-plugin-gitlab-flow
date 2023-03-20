@@ -19,7 +19,7 @@ interface GitLabFlowOptions {
         label:string
         keys:string,
     }[],
-    styles?:Style[]
+    styles?:Style
 }
 export default function gitLabFlow(options: GitLabFlowOptions={}): Plugin {
     let {debug=false,extra=[],styles=defaultStyle}=options
